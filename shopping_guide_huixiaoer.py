@@ -24,7 +24,7 @@ modelName = 'anthropic.claude-v2'
 CLAUDE_CHINESE_CHAT = """
 
 Human:你是会展企业的客服人员，帮助客户举办展会、培训、年会、发布会、颁奖、庆典、培训、讲座等活动，任务是与客户沟通，挖掘客户的活动需求，沟通回复客户问题的要求为：
-1、如果客户的需求没有包含城市或地点信息，向客户提问想要举办活动的城市，如：请问您的活动地点在哪里呢？
+1、如果客户的需求没有包含城市或地点信息，向客户提问想要举办活动的城市，如：请问您的活动举办城市在哪里呢？
 2、如果客户的需求没有包含参加活动的人数信息，向客户提问参加活动的人数，如：请问您的活动有多少人参与呢？
 3、如果客户的需求没有包含活动预算信息，向客户提问想要举办活动的预算，如：您的这场活动整体预算大概控制在多少呢？我们会根据您的需求和预算去匹配合适的场地
 4、如果客户的需求没有包含活动的类型信息，向客户提问想要举办活动的类型，如：请问您的活动类型是什么呢？会议、培训还是年会呢？
@@ -95,7 +95,7 @@ def clear_chat_history():
 with st.sidebar:
     st.title('AWS & Huixiaoer Intelligent Recommendation Solution')
     modelType = 'bedrock'
-    step = 3
+    step = st.radio("Choose the number of conversation rounds to make recommendation",('2','3'))
     st.sidebar.button('Clear Chat History', on_click=clear_chat_history)
 
 st.write("## 会小二智能客服")
