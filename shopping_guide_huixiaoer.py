@@ -102,7 +102,7 @@ st.write("## HXE智能客服")
 
 # Store LLM generated responses
 if "messages" not in st.session_state.keys():
-    st.session_state.messages = [{"role": "assistant", "content": "欢迎来到会小二，这里是人工客服 ，可以免费帮您预定会议场地、酒店住宿等，请问您要在哪个城市举办活动呢？"}]
+    st.session_state.messages = [{"role": "assistant", "content": "欢迎来到HXE，这里是人工客服 ，可以免费帮您预定会议场地、酒店住宿等，请问您要在哪个城市举办活动呢？"}]
     now = datetime.now()
     timestamp = datetime.timestamp(now)
     st.session_state.sessionId = 'ir'+str(timestamp)
